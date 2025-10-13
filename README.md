@@ -1,12 +1,40 @@
 # pleasing-tmux
-I wanted a simple, clean and effective tmux “theme” that didn’t require any plug-ins, was pleasing to look at, and conveyed pertinent information in an easy to comprehend layout. If you want the CPU & memory status you will need a plkugin for that, but it's purely optional. 
+I wanted a simple, clean and effective tmux “theme” that didn’t require any plug-ins, was pleasing to look at, and conveyed pertinent information in an easy to comprehend layout. If you want the CPU & memory status you will need a plugin for that, but it's purely optional. 
 
-# Configuration
-Copy the contents of `tmux/tmux.conf` to your setup And reload your tmux configuration (or detach & reattach). Note: if you decide to use the CPU & memory plug-in, the order of the plug-ins matters and it should be the last one to the list, but before run `~/.tmux/plugins/tpm/tpm`.
+ <img width="1327" height="779" alt="pleasing_tmux" src="https://github.com/user-attachments/assets/e1b8b0f0-56cf-4e92-8e32-e895513f7f15" />
 
-# Acknowledgments & inspiration
-- Hendrik's [minimal tmux layout](https://youtu.be/6Jgl5wphD00)
-- The very effective [CPU & memory plug-in by Hendrik](https://github.com/hendrikmi/tmux-cpu-mem-monitor)
+## Requirements
+- A patched [Nerd Font](https://www.nerdfonts.com/)
+
+## Configuration
+Copy the contents of `tmux/tmux.conf` to your setup And reload your tmux configuration.
+
+## Troubleshooting
+- If colors don't look right you may need these lines in your config:
+```
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",*256col*:Tc"
+```
+- If you decide to use the CPU & memory plugin, and you don't see the values in the status bar, check the order of your plugins. For example, this order works for me:
+```
+set -g @plugin "tmux-plugins/tpm"
+
+set -g @plugin "christoomey/vim-tmux-navigator"
+set -g @plugin "tmux-plugins/tmux-resurrect"
+set -g @plugin "tmux-plugins/tmux-continuum"
+set -g @plugin "hendrikmi/tmux-cpu-mem-monitor"
+
+set -g @resurrect-capture-pane-contents "on"
+set -g @resurrect-strategy-nvim "session"
+set -g @resurrect-dir "~/.config/tmux/resurrect"
+
+# other config ...
+
+run "~/.tmux/plugins/tpm/tpm"
+```
+
+## Acknowledgments & inspiration
+- Hendrik's [minimal tmux layout](https://youtu.be/6Jgl5wphD00) & [CPU & memory plugin](https://github.com/hendrikmi/tmux-cpu-mem-monitor)
 - The [catppuccin color palette](https://catppuccin.com/palette/)
 
 Contributing
