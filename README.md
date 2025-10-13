@@ -37,5 +37,5 @@ run "~/.tmux/plugins/tpm/tpm"
 - Hendrik's [minimal tmux layout](https://youtu.be/6Jgl5wphD00) & [CPU & memory plugin](https://github.com/hendrikmi/tmux-cpu-mem-monitor)
 - The [catppuccin color palette](https://catppuccin.com/palette/)
 
-Contributing
+## Contributing
 If you have any input or recommendations, open a PR!
