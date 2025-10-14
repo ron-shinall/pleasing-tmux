@@ -7,7 +7,7 @@ A clean tmux status bar layout that doesn't require any plugins. If you want the
 - A patched [Nerd Font](https://www.nerdfonts.com/)
 
 ## Configuration
-Copy the contents of `tmux/tmux.conf` to your setup And reload your tmux configuration.
+Copy the contents of `tmux/tmux.conf` to your setup and reload your tmux configuration.
 
 ## Troubleshooting
 - If colors don't look right you may need these lines in your config:
