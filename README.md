@@ -1,7 +1,7 @@
 # pleasing-tmux
 A clean tmux status bar layout that doesn't require any plugins. If you want the CPU & memory status you will need a plugin for that, but it's purely optional.
 
- <img width="1327" height="779" alt="pleasing_tmux" src="https://github.com/user-attachments/assets/e1b8b0f0-56cf-4e92-8e32-e895513f7f15" />
+<img width="1379" height="779" alt="pleasing tmux" src="https://github.com/user-attachments/assets/7e5ba3a1-d580-4af4-997f-a376e07fbd8d" />
 
 ## Requirements
 - A patched [Nerd Font](https://www.nerdfonts.com/)
